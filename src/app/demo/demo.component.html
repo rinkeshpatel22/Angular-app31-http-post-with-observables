@@ -1,0 +1,17 @@
+<h3>Http POST Example</h3>
+
+<div class="form">
+  <form [formGroup]="empFormGroup" (ngSubmit)="onFormSubmit()" method="post">
+    <div><input type="text" placeholder="First name" formControlName="firstName"></div>
+    <div><input type="text" placeholder="Last name" formControlName="lastName"></div>
+    <div><input type="text" placeholder="Email ID" formControlName="email"></div>
+    <div><input type="text" placeholder="Mobile Number" formControlName="mobile"></div>
+    <div><input type="text" placeholder="Employee ID" formControlName="empId"></div>
+    <div><button type="submit">Submit</button></div>
+  </form>
+</div>
+
+<p *ngIf="empPostResponse">
+  POST response:
+  {{empPostResponse | json}}
+</p>
